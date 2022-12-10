@@ -1,0 +1,411 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,span,p,ul,ol{
+margin: 0;
+}
+:root{
+    --primary-clr:#11161E;
+    --second-clr:#FF6F61;
+    --primary-font:'Josefin Sans', sans-serif;
+    --second-font:'Roboto', sans-serif;
+    --banner-height:800px;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;;
+}
+.button{
+    font-size: 18px;
+    font-weight: 600;
+    color:white;
+    display: inline-block;
+    background-color: var(--second-clr);
+    padding: 10px 19px;
+    transition: .3s;
+}
+/* navbars starts here */
+#mycustomnav ul li a{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 42px 22px;
+    color: var(--primary-clr);
+    transition: .3s;
+}
+#mycustomnav ul li:hover a{
+    color: var(--second-clr); 
+}
+nav .icon ul li{
+    display: inline-block;
+}
+nav .icon ul li span,
+nav .icon ul li a{
+    display: inline-block;
+    color: var(--primary-clr);
+    padding: 0 13px;
+    font-size: 18px;
+    position: relative;
+}
+nav .icon ul li a img{
+    display: block;
+    width: 100%;
+   
+}
+
+
+nav .icon ul li a  .overlay{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--second-clr);
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    line-height: 15px;
+    font-size: 12px;
+    color: white;
+    top: 0;
+    right:8px;
+    
+    
+}
+nav .toggle-button  {
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+  
+
+}
+nav #smallmenu .small-logo{
+    height: 40px;
+}
+nav #smallmenu .small-menu li a{
+    display: block;
+    font-size: 18px;
+    border-bottom: 1px solid #777;
+    color: var(--primary-clr);
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+nav #smallmenu .icon{
+    padding: 15px 0;
+   
+    text-align: center;
+}
+/* menu ends here */
+/* banner part starts here */
+#banner{
+    position: relative;
+}
+#banner .banner-slider{
+   height: var(--banner-height);
+    background-position: center;
+    background-size: cover;
+}
+#banner .banner-slider .row{
+    height: var(--banner-height);
+}
+#banner .banner-slider .banner-cnt{
+    width: 45%;
+}
+#banner .banner-slider .banner-cnt h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-clr);
+}
+#banner .banner-slider .banner-cnt h2{
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--primary-clr);
+    margin: 30px 0 22px 0;
+    transition-delay: .2s;
+}
+#banner .banner-slider .banner-cnt p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-clr);
+    font-family: var(--second-font);
+    width: 455px;
+    margin-bottom:43px ;
+    line-height: 24px;
+    transition-delay: .4s;
+}
+#banner .banner-slider .banner-cnt a{
+    transition-delay: .8s;
+}
+
+#banner .banner-slider .banner-cnt:hover a{
+    color:white;
+    background-color: var(--primary-clr);
+   
+}
+#banner .banner-slider .banner-cnt a i{
+   display:inline-block;
+  margin-left: 10px;
+}
+  #banner .banner-slider .banner-cnt a:hover i{
+    margin-left: 30px;
+  }
+  #banner .banner-slider .banner-cnt > *{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: .5s ease;
+  }
+  #banner .banner-slider.slick-active .banner-cnt > *{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+   #banner .slick-dots{
+    position: absolute;
+    bottom: 20%;
+    left:90px;
+   }
+   #banner .slick-dots li{
+    display: inline-block;
+   }
+   #banner .slick-dots button{
+    width: 25px;
+    height: 12px;
+    border: none;
+    color: transparent;
+    border-radius: 6px;
+    margin-left: 15px;
+    transition: .5s;
+   }
+   #banner .slick-dots .slick-active button{
+    width: 45px;
+    background-color: var(--second-clr);
+   }
+   /* banner ends here */
+   /* catagori starts here */
+   #catagories{
+     padding: 50px 0px;
+   }
+   #catagories .catagori-card img{
+    display: block;
+    width: 100%;
+}
+#catagories .catagori-card:nth-child(1){
+    margin-bottom: 15px;
+}
+#catagories .catagori-card .overlay{
+    position: absolute;
+    inset: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(3, 3, 3, 0.316);
+    transform: scale(0);
+    transition: .3s ease;
+
+}
+#catagories .catagori-card {
+    position: relative;
+   
+}
+#catagories .catagori-card:hover .overlay{
+    transform: scale(1);
+}
+#catagories .catagori-card .overlay h3{
+    text-align: center;
+    color: white;
+    
+}
+#catagories .catagori-card .overlay a{
+display: block;
+text-align: center;
+color: white;
+padding: 10px 0;
+}
+#catagories .catagori-card .overlay a i{
+    padding-left: 10px;
+}
+
+/* ner arrival product starts here */
+#new-arrival{
+    padding: 50px 0;
+}
+#new-arrival .heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#new-arrival .heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-clr);
+}
+#new-arrival .arrival-product{
+    
+    padding: 0 15px;
+    z-index: -1;
+
+}
+
+
+#new-arrival .new-arrival-cnt {
+  text-align: center;
+  border: 1px solid #F1F3F4;
+   
+}
+
+#new-arrival .new-arrival-cnt .arrival-img img{
+    display: block;
+    width: 100%;
+}
+#new-arrival .new-arrival-cnt p{
+    
+    color:  #444444;
+    font-size: 16px;
+    font-weight: 400;
+}
+#new-arrival .new-arrival-cnt p span{
+   color: #BDBDBD;
+   font-size: 16px;
+   font-weight: 400;
+   text-decoration: line-through;
+   margin-left: 10px;
+
+}
+#new-arrival  .product-info h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--primary-clr);
+    padding: 15px 0;
+}
+#new-arrival .new-arrival-cnt .product-info{
+    padding: 25px 0;
+    text-align: center;
+}
+#new-arrival .new-arrival-cnt span{
+    color: var(--second-clr);
+}
+#new-arrival .new-arrival-cnt .arrival-img{
+    position: relative;
+}
+#new-arrival .new-arrival-cnt .overlay{
+    position: absolute;
+    right: 18px;
+    top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+   
+}
+#new-arrival .new-arrival-cnt:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+}
+#new-arrival .new-arrival-cnt .overlay ul li a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary-clr);
+    transition: .3s;
+}
+#new-arrival .new-arrival-cnt .overlay ul li a img{
+    display: inline-block;
+}
+#new-arrival .new-arrival-cnt .overlay ul li:hover a{
+    color: white;
+    background-color: var(--second-clr);
+}
+#new-arrival .new-arrival-cnt .overlay ul li a:hover img{
+    color: white;
+    background-color: var(--second-clr);
+}
+#new-arrival .new-arrival-cnt .overlay ul li{
+    position: relative;
+}
+#new-arrival .new-arrival-cnt .overlay ul li .tooltip-product{
+    position: absolute;
+    left: -138px;
+    top: 4px;
+    background-color: var(--primary-clr);
+    padding: 7px 0;
+    width: 125px;
+    border-radius: 6px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
+    
+}
+#new-arrival .new-arrival-cnt .overlay ul li:hover .tooltip-product{
+    opacity: 1;
+    visibility: visible;
+}
+#new-arrival .new-arrival-cnt .overlay ul li .tooltip-product span{
+    text-transform: capitalize;
+    color: white;
+}
+#new-arrival .new-arrival-cnt .overlay ul li .tooltip-product::after{
+    content: "";
+    top: 10px;
+    right: -6px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: var(--primary-clr);
+    z-index: -1;
+}
+#new-arrival .new-arrival-cnt .discount{
+    position: absolute;
+    background-color: var(--second-clr);
+    width: 45px;
+    height: 20px;
+    top: 12px;
+    left: 20px;
+    transform: rotate(-90deg);
+    border-radius: 15px 0px 0px 15px;
+    color: white;
+}
+
+/* arrow start here */
+#new-arrival{
+    position: relative;
+}
+#new-arrival .preArrow
+{
+   position: absolute;
+   top: 45%;
+   left: 131px;
+   z-index: 1;
+}
+#new-arrival .nextArrow{
+    position: absolute;
+   top: 45%;
+   right: 131px;
+   z-index: 1;
+
+}
+#new-arrival .preArrow span,
+#new-arrival .nextArrow span{
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    background-color: #b3aeae;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color:white;
+
+}
+
